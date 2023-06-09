@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addBook } from '../redux/books/Actions'
+import fetchAddBook from '../redux/books/thunk/fetchAddBook'
 
 const AddBook = () => {
   const dispatch = useDispatch()
   const [books, setBooks] = useState({
-    bookId: '',
-    bookName: '',
-    authorName: '',
-    imageUrl: '',
-    bookPrice: '',
-    bookRating: '',
+    // bookId: '',
+    name: '',
+    author: '',
+    thumbnail: '',
+    price: '',
+    rating: '',
     featured: '',
   })
 
@@ -24,13 +24,12 @@ const AddBook = () => {
   }
 
   const handleSubmit = (e) => {
-    const newBook = {
-      ...books,
-      bookId: Math.random().toString(16).slice(2),
-    }
+    // const newBook = {
+    //   ...books,
+    //   bookId: Math.random().toString(16).slice(2),
+    // }
     e.preventDefault()
-    dispatch(addBook(newBook))
-    console.log(newBook)
+    dispatch(fetchAddBook(books))
   }
 
   return (

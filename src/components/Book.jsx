@@ -5,12 +5,12 @@ import { deleteBook } from '../redux/books/Actions'
 
 const Book = ({ book }) => {
   const {
-    bookId,
-    bookName,
-    authorName,
-    imageUrl,
-    bookPrice,
-    bookRating,
+    id,
+    name,
+    author,
+    thumbnail,
+    price,
+    rating,
     featured,
   } = book
   const dispatch = useDispatch()
@@ -23,7 +23,7 @@ const Book = ({ book }) => {
     <div className="book-card">
       <img
         className="h-[240px] w-[170px] object-cover lws-bookThumbnail"
-        src={imageUrl}
+        src={thumbnail}
         alt="book"
       />
       <div className="flex-1 h-full pr-2 pt-2 flex flex-col">
@@ -50,7 +50,7 @@ const Book = ({ book }) => {
             </button>
             <button
               className="lws-delete"
-              onClick={() => handleDeleteBook(bookId)}>
+              onClick={() => handleDeleteBook(id)}>
               <svg
                 fill="none"
                 viewBox="0 0 24 24"
@@ -69,10 +69,10 @@ const Book = ({ book }) => {
 
         <div className="space-y-2 mt-4 h-full">
           <h4 className="lws-bookName">
-            {bookName}
+            {name}
             {/* Life Hurts: A Doctor's Personal Journey Through Anorexia - Dr Elizabeth McNaught */}
           </h4>
-          <p className="lws-author">{authorName}</p>
+          <p className="lws-author">{author}</p>
           <div className="lws-stars">
             <svg viewBox="0 0 20 20" fill="currentColor" className="lws-star">
               <path
@@ -82,7 +82,7 @@ const Book = ({ book }) => {
               />
             </svg>
           </div>
-          <p className="lws-price">BDT - {bookPrice}</p>
+          <p className="lws-price">BDT - {price}</p>
         </div>
       </div>
     </div>
