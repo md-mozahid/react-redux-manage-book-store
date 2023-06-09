@@ -1,4 +1,4 @@
-import { ADD_BOOK, DELETE_BOOK, UPDATE_BOOK } from './actionsType'
+import { ADD_BOOK, DELETE_BOOK, LOADED_BOOK, UPDATE_BOOK } from './actionsType'
 
 export const addBook = (newBook) => {
   return {
@@ -18,5 +18,12 @@ export const deleteBook = (bookId) => {
   return {
     type: DELETE_BOOK,
     payload: bookId,
+  }
+}
+
+export const loadedBook = (books) => {
+  return {
+    type: LOADED_BOOK,
+    payload: books,
   }
 }
