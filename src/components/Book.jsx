@@ -2,17 +2,9 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteBook } from '../redux/books/Actions'
 
-
 const Book = ({ book }) => {
-  const {
-    id,
-    name,
-    author,
-    thumbnail,
-    price,
-    rating,
-    featured,
-  } = book
+  const { id, name, author, thumbnail, price, rating, featured } = book
+  console.log(book)
   const dispatch = useDispatch()
 
   const handleDeleteBook = (id) => {
@@ -48,9 +40,7 @@ const Book = ({ book }) => {
                 />
               </svg>
             </button>
-            <button
-              className="lws-delete"
-              onClick={() => handleDeleteBook(id)}>
+            <button className="lws-delete" onClick={() => handleDeleteBook(id)}>
               <svg
                 fill="none"
                 viewBox="0 0 24 24"

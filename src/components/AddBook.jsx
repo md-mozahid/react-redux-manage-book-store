@@ -24,10 +24,6 @@ const AddBook = () => {
   }
 
   const handleSubmit = (e) => {
-    // const newBook = {
-    //   ...books,
-    //   bookId: Math.random().toString(16).slice(2),
-    // }
     e.preventDefault()
     dispatch(fetchAddBook(books))
   }
@@ -43,7 +39,7 @@ const AddBook = () => {
             className="text-input"
             type="text"
             id="input-Bookname"
-            name="bookName"
+            name="name"
             onChange={handleChange}
           />
         </div>
@@ -55,7 +51,7 @@ const AddBook = () => {
             className="text-input"
             type="text"
             id="input-Bookauthor"
-            name="authorName"
+            name="author"
             onChange={handleChange}
           />
         </div>
@@ -67,7 +63,7 @@ const AddBook = () => {
             className="text-input"
             type="text"
             id="input-Bookthumbnail"
-            name="imageUrl"
+            name="thumbnail"
             onChange={handleChange}
           />
         </div>
@@ -80,7 +76,7 @@ const AddBook = () => {
               className="text-input"
               type="number"
               id="input-Bookprice"
-              name="bookPrice"
+              name="price"
               onChange={handleChange}
             />
           </div>
@@ -92,7 +88,7 @@ const AddBook = () => {
               className="text-input"
               type="number"
               id="input-Bookrating"
-              name="bookRating"
+              name="rating"
               min="1"
               max="5"
               onChange={handleChange}
