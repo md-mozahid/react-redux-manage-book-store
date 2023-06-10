@@ -4,23 +4,42 @@ import fetchAddBook from '../redux/books/thunk/fetchAddBook'
 
 const AddBook = () => {
   const dispatch = useDispatch()
-  const [books, setBooks] = useState({
-    // bookId: '',
-    name: '',
-    author: '',
-    thumbnail: '',
-    price: '',
-    rating: '',
-    featured: '',
-  })
 
-  const handleChange = (e) => {
-    setBooks((prev) => {
-      return {
-        ...prev,
-        [e.target.name]: e.target.value,
-      }
-    })
+  // option 01
+  // const [books, setBooks] = useState({
+  //   // bookId: '',
+  //   name: '',
+  //   author: '',
+  //   thumbnail: '',
+  //   price: '',
+  //   rating: '',
+  //   featured: '',
+  // })
+
+  // const handleChange = (e) => {
+  //   setBooks((prev) => {
+  //     return {
+  //       ...prev,
+  //       [e.target.name]: e.target.value,
+  //     }
+  //   })
+  // }
+
+  // option 02
+  const [bookName, setBookName] = useState('')
+  const [author, setAuthor] = useState('')
+  const [thumbnail, setThumbnail] = useState('')
+  const [price, setPrice] = useState('')
+  const [rating, setRating] = useState('')
+  const [featured, setFeatured] = useState(false)
+
+  const books = {
+    name: bookName,
+    author: author,
+    thumbnail: thumbnail,
+    price: price,
+    rating: rating,
+    featured: featured,
   }
 
   const handleSubmit = (e) => {
@@ -40,7 +59,9 @@ const AddBook = () => {
             type="text"
             id="input-Bookname"
             name="name"
-            onChange={handleChange}
+            // onChange={handleChange}
+            value={bookName}
+            onChange={(e) => setBookName(e.target.value)}
           />
         </div>
 
@@ -52,7 +73,9 @@ const AddBook = () => {
             type="text"
             id="input-Bookauthor"
             name="author"
-            onChange={handleChange}
+            // onChange={handleChange}
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
           />
         </div>
 
@@ -64,7 +87,9 @@ const AddBook = () => {
             type="text"
             id="input-Bookthumbnail"
             name="thumbnail"
-            onChange={handleChange}
+            // onChange={handleChange}
+            value={thumbnail}
+            onChange={(e) => setThumbnail(e.target.value)}
           />
         </div>
 
@@ -77,7 +102,9 @@ const AddBook = () => {
               type="number"
               id="input-Bookprice"
               name="price"
-              onChange={handleChange}
+              // onChange={handleChange}
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
             />
           </div>
 
@@ -91,7 +118,9 @@ const AddBook = () => {
               name="rating"
               min="1"
               max="5"
-              onChange={handleChange}
+              // onChange={handleChange}
+              value={rating}
+              onChange={(e) => setRating(e.target.value)}
             />
           </div>
         </div>
@@ -102,7 +131,9 @@ const AddBook = () => {
             type="checkbox"
             name="featured"
             className="w-4 h-4"
-            onChange={handleChange}
+            // onChange={handleChange}
+            value={featured}
+            onChange={(e) => setFeatured(e.target.value)}
           />
           <label htmlFor="featured" className="ml-2 text-sm">
             This is a featured book

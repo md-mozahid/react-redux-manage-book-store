@@ -4,7 +4,7 @@ import { deleteBook } from '../redux/books/Actions'
 
 const Book = ({ book }) => {
   const { id, name, author, thumbnail, price, rating, featured } = book
-  console.log(book)
+  // console.log(book)
   const dispatch = useDispatch()
 
   const handleDeleteBook = (id) => {
