@@ -60,7 +60,6 @@ const Book = ({ book }) => {
         <div className="space-y-2 mt-4 h-full">
           <h4 className="lws-bookName">
             {name}
-            {/* Life Hurts: A Doctor's Personal Journey Through Anorexia - Dr Elizabeth McNaught */}
           </h4>
           <p className="lws-author">{author}</p>
           <div className="lws-stars">

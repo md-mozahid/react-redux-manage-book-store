@@ -33,17 +33,16 @@ const AddBook = () => {
   const [rating, setRating] = useState('')
   const [featured, setFeatured] = useState(false)
 
-  const books = {
-    name: bookName,
-    author: author,
-    thumbnail: thumbnail,
-    price: price,
-    rating: rating,
-    featured: featured,
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault()
+    const books = {
+      name: bookName,
+      author: author,
+      thumbnail: thumbnail,
+      price: price,
+      rating: rating,
+      featured: featured,
+    }
     dispatch(fetchAddBook(books))
   }
 

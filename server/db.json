@@ -31,16 +31,70 @@
       "id": 4
     },
     {
+      "name": "book name",
+      "author": "Md. Mozahid",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "14",
+      "rating": "1",
+      "featured": "false",
       "id": 5
     },
     {
       "id": 6
     },
     {
+      "name": "book name",
+      "author": "Md. Mozahid",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "14",
+      "rating": "1",
+      "featured": "false",
       "id": 7
     },
     {
+      "name": "book name",
+      "author": "Md. Mozahid",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "14",
+      "rating": "1",
+      "featured": "false",
       "id": 8
+    },
+    {
+      "name": "book name",
+      "author": "Md. Mozahid",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "14",
+      "rating": "1",
+      "featured": "false",
+      "id": 9
+    },
+    {
+      "name": "book name",
+      "author": "Md. Mozahid",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "14",
+      "rating": "1",
+      "featured": "false",
+      "id": 10
+    },
+    {
+      "name": "book name",
+      "author": "Md. Mozahid",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "14",
+      "rating": "1",
+      "featured": true,
+      "id": 11
+    },
+    {
+      "name": "book name",
+      "author": "Md. Mozahid",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "14",
+      "rating": "1",
+      "featured": true,
+      "id": 12
     }
   ]
 }
