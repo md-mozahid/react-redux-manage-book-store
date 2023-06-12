@@ -1,14 +1,11 @@
-import { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import fetchAddBook from '../redux/books/thunk/fetchAddBook'
 
 const AddBook = () => {
   const dispatch = useDispatch()
-  const editBook = useSelector((state) => state.books)
 
-  // option 01
   const [books, setBooks] = useState({
-    // bookId: '',
     name: '',
     author: '',
     thumbnail: '',
@@ -26,56 +23,15 @@ const AddBook = () => {
     })
   }
 
-  // option 02
-  // const [bookName, setBookName] = useState('')
-  // const [author, setAuthor] = useState('')
-  // const [thumbnail, setThumbnail] = useState('')
-  // const [price, setPrice] = useState('')
-  // const [rating, setRating] = useState('')
-  // const [featured, setFeatured] = useState(false)
-
-  const [isEditing, setIsEditing] = useState(false)
-
   const handleSubmit = (e) => {
     e.preventDefault()
-    // const books = {
-    //   name: bookName,
-    //   author: author,
-    //   thumbnail: thumbnail,
-    //   price: price,
-    //   rating: rating,
-    //   featured: featured,
-    // }
     dispatch(fetchAddBook(books))
   }
-
-  const updatedBook = (e) => {
-    e.preventDefault()
-    dispatch(bookUpdated(books))
-  }
-
-  useEffect(() => {
-    if (editBook?.id) {
-      setIsEditing(true)
-      setBooks({
-        name: editBook?.name,
-        author: editBook?.author,
-        thumbnail: editBook?.thumbnail,
-        price: editBook?.price,
-        rating: editBook?.rating,
-        featured: editBook?.featured,
-      })
-    } else {
-      setIsEditing(false)
-    }
-  })
 
   return (
     <div className="p-4 overflow-hidden bg-white shadow-cardShadow rounded-md">
       <h4 className="mb-8 text-xl font-bold text-center">Add New Book</h4>
-      <form
-        className="book-form"
-        onSubmit={isEditing ? updatedBook : handleSubmit}>
+      <form className="book-form" onSubmit={handleSubmit}>
         <div className="space-y-2">
           <label htmlFor="name">Book Name</label>
           <input
@@ -166,7 +122,7 @@ const AddBook = () => {
         </div>
 
         <button type="submit" className="submit" id="submit">
-          {isEditing ? 'Update Book' : 'Add Book'}
+          Add Book
         </button>
       </form>
     </div>
