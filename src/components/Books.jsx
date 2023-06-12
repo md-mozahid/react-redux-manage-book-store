@@ -6,7 +6,6 @@ import Book from './Book'
 const Books = () => {
   const dispatch = useDispatch()
   const books  = useSelector((state) => state.books)
-  console.log(books)
 
   useEffect(() => {
     dispatch(fetchBooks)

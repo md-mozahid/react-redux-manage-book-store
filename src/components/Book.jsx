@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteBook } from '../redux/books/Actions'
+import { deleteBook, editedBook } from '../redux/books/Actions'
 
 const Book = ({ book }) => {
   const { id, name, author, thumbnail, price, rating, featured } = book
@@ -9,6 +9,10 @@ const Book = ({ book }) => {
 
   const handleDeleteBook = (id) => {
     dispatch(deleteBook(id))
+  }
+
+  const handleEditBook = () => {
+    dispatch(editedBook(book))
   }
 
   return (
@@ -26,7 +30,7 @@ const Book = ({ book }) => {
             <span>{''}</span>
           )}
           <div className="text-gray-500 space-x-2">
-            <button className="lws-edit">
+            <button className="lws-edit" onClick={handleEditBook}>
               <svg
                 fill="none"
                 viewBox="0 0 24 24"
@@ -58,9 +62,7 @@ const Book = ({ book }) => {
         </div>
 
         <div className="space-y-2 mt-4 h-full">
-          <h4 className="lws-bookName">
-            {name}
-          </h4>
+          <h4 className="lws-bookName">{name}</h4>
           <p className="lws-author">{author}</p>
           <div className="lws-stars">
             <svg viewBox="0 0 20 20" fill="currentColor" className="lws-star">

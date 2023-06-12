@@ -1,31 +1,33 @@
-import { ADD_BOOK, DELETE_BOOK, LOADED_BOOK } from './actionsType'
+import {
+  ADD_BOOK,
+  DELETE_BOOK,
+  EDITED_BOOK,
+  LOADED_BOOK,
+  UPDATE_BOOK,
+} from './actionsType'
 import { initialState } from './initialState'
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      // option 01
-      // return [...state, action.payload]
-
-      // option 02
-      const newBook = action.payload
-      return [
-        ...state,
-        {
-          name: newBook.name,
-          author: newBook.author,
-          thumbnail: newBook.thumbnail,
-          price: newBook.price,
-          rating: newBook.rating,
-          featured: newBook.featured,
-        },
-      ]
+      return [...state, action.payload]
 
     case DELETE_BOOK:
       return state.filter((book) => book.id !== action.payload)
 
     case LOADED_BOOK:
       return action.payload
+
+    case UPDATE_BOOK:
+      const updatedBook = action.payload.updatedData
+      const index = state.findIndex((book) => book.id === action.payload)
+      if (!index || index) {
+        state[index] = updatedBook
+      }
+      return state
+
+    case EDITED_BOOK:
+      return (state = action.payload)
 
     default:
       return state

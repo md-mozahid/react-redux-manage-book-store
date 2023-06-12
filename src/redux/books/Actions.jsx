@@ -1,4 +1,10 @@
-import { ADD_BOOK, DELETE_BOOK, LOADED_BOOK, UPDATE_BOOK } from './actionsType'
+import {
+  ADD_BOOK,
+  DELETE_BOOK,
+  EDITED_BOOK,
+  LOADED_BOOK,
+  UPDATE_BOOK,
+} from './actionsType'
 
 export const addBook = (newBook) => {
   return {
@@ -7,10 +13,18 @@ export const addBook = (newBook) => {
   }
 }
 
-export const updateBook = (bookId) => {
+export const updateBook = (bookId, updatedData) => {
+  console.log(bookId, updatedData)
   return {
     type: UPDATE_BOOK,
-    payload: bookId,
+    payload: { bookId, updatedData },
+  }
+}
+
+export const editedBook = (updatedInfo) => {
+  return {
+    type: EDITED_BOOK,
+    payload: updatedInfo,
   }
 }
 

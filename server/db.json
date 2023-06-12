@@ -28,73 +28,40 @@
       "id": 3
     },
     {
+      "name": "item2",
+      "author": "md",
+      "thumbnail": "https://m.media-amazon.com/images/P/B07DZ86WP7.01._SCLZZZZZZZ_SX500_.jpg",
+      "price": "12",
+      "rating": "2",
+      "featured": "false",
       "id": 4
     },
     {
-      "name": "book name",
-      "author": "Md. Mozahid",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": "14",
-      "rating": "1",
-      "featured": "false",
+      "name": "Md. Mozahid",
+      "author": "md",
+      "thumbnail": "https://m.media-amazon.com/images/P/B07DZ86WP7.01._SCLZZZZZZZ_SX500_.jpg",
+      "price": "32",
+      "rating": "4",
+      "featured": false,
       "id": 5
     },
     {
+      "name": "Md. Mozahid",
+      "author": "md",
+      "thumbnail": "https://m.media-amazon.com/images/P/B07DZ86WP7.01._SCLZZZZZZZ_SX500_.jpg",
+      "price": "32",
+      "rating": "4",
+      "featured": "false",
       "id": 6
     },
     {
-      "name": "book name",
-      "author": "Md. Mozahid",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": "14",
-      "rating": "1",
-      "featured": "false",
+      "name": "Md. Mozahid",
+      "author": "md",
+      "thumbnail": "https://m.media-amazon.com/images/P/B07DZ86WP7.01._SCLZZZZZZZ_SX500_.jpg",
+      "price": "23",
+      "rating": "2",
+      "featured": "on",
       "id": 7
-    },
-    {
-      "name": "book name",
-      "author": "Md. Mozahid",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": "14",
-      "rating": "1",
-      "featured": "false",
-      "id": 8
-    },
-    {
-      "name": "book name",
-      "author": "Md. Mozahid",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": "14",
-      "rating": "1",
-      "featured": "false",
-      "id": 9
-    },
-    {
-      "name": "book name",
-      "author": "Md. Mozahid",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": "14",
-      "rating": "1",
-      "featured": "false",
-      "id": 10
-    },
-    {
-      "name": "book name",
-      "author": "Md. Mozahid",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": "14",
-      "rating": "1",
-      "featured": true,
-      "id": 11
-    },
-    {
-      "name": "book name",
-      "author": "Md. Mozahid",
-      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": "14",
-      "rating": "1",
-      "featured": true,
-      "id": 12
     }
   ]
 }
