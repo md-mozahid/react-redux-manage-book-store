@@ -1,11 +1,6 @@
-import {
-  ADD_BOOK,
-  DELETE_BOOK,
-  EDITED_BOOK,
-  LOADED_BOOK,
-  UPDATE_BOOK,
-} from './actionsType'
+import { ADD_BOOK, DELETE_BOOK, LOADED_BOOK, UPDATE_BOOK } from './actionsType'
 
+// add book
 export const addBook = (newBook) => {
   return {
     type: ADD_BOOK,
@@ -13,21 +8,16 @@ export const addBook = (newBook) => {
   }
 }
 
-export const updateBook = (bookId, updatedData) => {
-  console.log(bookId, updatedData)
+// updated book
+export const updateBook = (id, updatedData) => {
+  console.log(id, updatedData)
   return {
     type: UPDATE_BOOK,
-    payload: { bookId, updatedData },
+    payload: { id, updatedData },
   }
 }
 
-export const editedBook = (updatedInfo) => {
-  return {
-    type: EDITED_BOOK,
-    payload: updatedInfo,
-  }
-}
-
+// delete book
 export const deleteBook = (bookId) => {
   return {
     type: DELETE_BOOK,
@@ -35,6 +25,7 @@ export const deleteBook = (bookId) => {
   }
 }
 
+// loaded book
 export const loadedBook = (books) => {
   return {
     type: LOADED_BOOK,

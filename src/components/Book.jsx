@@ -1,9 +1,10 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteBook, editedBook } from '../redux/books/Actions'
+import { deleteBook } from '../redux/books/Actions'
+import {  editedBook } from '../redux/editBooks/Actions'
 
 const Book = ({ book }) => {
-  const { id, name, author, thumbnail, price, rating, featured } = book
+  const { id, name, author, thumbnail, price, rating, featured } = book || {}
   const dispatch = useDispatch()
 
   const handleDeleteBook = (id) => {

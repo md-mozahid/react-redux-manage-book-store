@@ -12,7 +12,7 @@ const bookUpdated = (id, updatedData) => {
       })
       const books = await response.json()
 
-      dispatch(updateBook(books))
+      dispatch(updateBook(books.id, books))
     } catch (error) {
       console.log(error)
     }

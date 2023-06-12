@@ -1,10 +1,4 @@
-import {
-  ADD_BOOK,
-  DELETE_BOOK,
-  EDITED_BOOK,
-  LOADED_BOOK,
-  UPDATE_BOOK,
-} from './actionsType'
+import { ADD_BOOK, DELETE_BOOK, LOADED_BOOK, UPDATE_BOOK } from './actionsType'
 import { initialState } from './initialState'
 
 const bookReducer = (state = initialState, action) => {
@@ -20,14 +14,11 @@ const bookReducer = (state = initialState, action) => {
 
     case UPDATE_BOOK:
       const updatedBook = action.payload.updatedData
-      const index = state.findIndex((book) => book.id === action.payload)
+      const index = state.findIndex((book) => book.id === action.payload.id)
       if (!index || index) {
         state[index] = updatedBook
       }
       return state
-
-    case EDITED_BOOK:
-      return (state = action.payload)
 
     default:
       return state
