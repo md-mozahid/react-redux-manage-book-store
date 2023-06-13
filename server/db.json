@@ -17,6 +17,15 @@
       "rating": "2",
       "featured": "",
       "id": 2
+    },
+    {
+      "name": "bangla",
+      "author": "md",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "158",
+      "rating": "5",
+      "featured": "",
+      "id": 3
     }
   ]
 }

@@ -8,6 +8,7 @@ const Books = () => {
   const dispatch = useDispatch()
   const books = useSelector((state) => state.books)
   const filters = useSelector((state) => state.filters)
+  const search = useSelector((state) => state.search)
 
   useEffect(() => {
     dispatch(fetchBooks)
@@ -21,6 +22,17 @@ const Books = () => {
 
       default:
         return book
+    }
+  }
+
+  // search  function
+  const searchByName = (bookName) => {
+    if (bookName?.name?.includes(search.search)) {
+      return true
+    }
+
+    if (search.search.length === 1) {
+      return true
     }
   }
 
@@ -50,9 +62,12 @@ const Books = () => {
         </div>
       </div>
       <div className="lws-bookContainer">
-        {books?.filter(statusByFilter)?.map((book) => (
-          <Book book={book} key={book.id} />
-        ))}
+        {books
+          ?.filter(statusByFilter)
+          ?.filter(searchByName)
+          ?.map((book) => (
+            <Book book={book} key={book.id} />
+          ))}
       </div>
     </div>
   )
