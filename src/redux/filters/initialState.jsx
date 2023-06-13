@@ -1,3 +1,3 @@
-const initialState = {
-  search: '',
+export const initialState = {
+  status: 'All',
 }

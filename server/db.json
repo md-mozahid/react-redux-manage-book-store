@@ -4,10 +4,19 @@
       "name": "Book Name",
       "author": "Md. Mozahid",
       "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
-      "price": "140",
+      "price": "135",
       "rating": "3",
       "featured": "",
       "id": 1
+    },
+    {
+      "name": "rgg",
+      "author": "Md. Mozahid",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "12",
+      "rating": "2",
+      "featured": "",
+      "id": 2
     }
   ]
 }
