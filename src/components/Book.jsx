@@ -1,14 +1,14 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteBook } from '../redux/books/Actions'
-import {  editedBook } from '../redux/editBooks/Actions'
+import fetchDeleteBook from '../redux/books/thunk/fetchDeleteBook'
+import { editedBook } from '../redux/editBooks/Actions'
 
 const Book = ({ book }) => {
   const { id, name, author, thumbnail, price, rating, featured } = book || {}
   const dispatch = useDispatch()
 
   const handleDeleteBook = (id) => {
-    dispatch(deleteBook(id))
+    dispatch(fetchDeleteBook(id))
   }
 
   const handleEditBook = () => {
